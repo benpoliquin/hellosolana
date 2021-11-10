@@ -1,0 +1,12 @@
+[programs.localnet]
+helloworld = "EHyhQcq2wU6Vtavi8eJBUis4PnfcAuKU2tMNzG7LK7hy"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/benpoliquin/.config/solana/id.json"
+
+[scripts]
+test = "mocha -t 1000000 tests/"
