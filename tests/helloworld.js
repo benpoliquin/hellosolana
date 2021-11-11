@@ -8,9 +8,11 @@ const main = async() => {
   const provider = anchor.Provider.env()
   anchor.setProvider(provider)
 
+  // Anchor will automatically compile and deploy for us
   const program = anchor.workspace.Helloworld;
   const baseAccount = anchor.web3.Keypair.generate();
 
+  // await to wait for the validator to mine the instruction
   const tx = await program.rpc.startStuff({
     accounts: {
       baseAccount: baseAccount.publicKey,
@@ -34,7 +36,7 @@ const main = async() => {
   account = await program.account.baseAccount.fetch(baseAccount.publicKey)
   console.log("ACCOUNT TOTAL --", account);
 
-  console.log("Sig --", tx);
+  console.log("START TRANSACTION SIG --", tx);
 }
 
 const runMain = async () => {

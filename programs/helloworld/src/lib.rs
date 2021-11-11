@@ -1,3 +1,4 @@
+// similiar to "import anchor"
 use anchor_lang::prelude::*;
 
 declare_id!("EHyhQcq2wU6Vtavi8eJBUis4PnfcAuKU2tMNzG7LK7hy");
